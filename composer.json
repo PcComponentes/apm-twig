@@ -16,8 +16,8 @@
   },
   "require": {
     "php": "^7.4",
-    "zoilomora/elastic-apm-agent-php": "^0.1.9",
-    "twig/twig": "^3.0"
+    "twig/twig": "^3.0",
+    "zoilomora/elastic-apm-agent-php": "^0.1"
   },
   "require-dev": {
     "pccomponentes/coding-standard": "^1.0"
