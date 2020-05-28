@@ -1,0 +1,25 @@
+{
+  "name": "pccomponentes/apm-twig",
+  "description": "Elastic APM for Twig",
+  "license": "MIT",
+  "type": "library",
+  "authors": [
+    {
+      "name": "Zoilo Mora",
+      "email": "zoilo.mora@pccomponentes.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "PcComponentes\\ElasticAPM\\": "src/"
+    }
+  },
+  "require": {
+    "php": "^7.4",
+    "zoilomora/elastic-apm-agent-php": "^0.1.9",
+    "twig/twig": "^3.0"
+  },
+  "require-dev": {
+    "pccomponentes/coding-standard": "^1.0"
+  }
+}
