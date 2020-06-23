@@ -27,7 +27,7 @@ final class ApmExtension extends ProfilerExtension
 
     public function enter(Profile $profile)
     {
-        if ($profile->isTemplate()) {
+        if ($this->elasticApmTracer->active() && $profile->isTemplate()) {
             $key = $profile->getName();
 
             $this->events[$key] = $this->elasticApmTracer->startSpan(
@@ -47,7 +47,7 @@ final class ApmExtension extends ProfilerExtension
     {
         parent::leave($profile);
 
-        if ($profile->isTemplate()) {
+        if ($this->elasticApmTracer->active() && $profile->isTemplate()) {
             $key = $profile->getName();
 
             /** @var \ZoiloMora\ElasticAPM\Events\Span\Span $span */
